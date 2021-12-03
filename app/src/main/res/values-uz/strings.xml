@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="bookmarks" tools:ignore="ExtraTranslation">Xatchoplar</string>
+    <string name="savedarticlestothelibrary" tools:ignore="ExtraTranslation">Maqolalar kutubxonaga saqlangan</string>
+    <string name="info" tools:ignore="ExtraTranslation">Siz hali hech qanday maqola saqlamagansiz. Hoziroq ularni oqishni va xatchoplarni qoyishni boshlang</string>
+
+    <string name="browse" tools:ignore="ExtraTranslation">Korib chiqish</string>
+    <string name="discoverthingsofthisworld" tools:ignore="ExtraTranslation">Bu dunyodagi narsalarni kashf eting</string>
+    <string name="recommendedforyou" tools:ignore="ExtraTranslation">Siz uchun tavsiya etilgan</string>
+    <string name="seeall" tools:ignore="ExtraTranslation">Hammasini korish</string>
+
+    <string name="categories" tools:ignore="ExtraTranslation">Kategoriyalar</string>
+    <string name="thousandsofarticlesineachcategory" tools:ignore="ExtraTranslation">Har bir toifadagi minglab maqolalar</string>
+
+    <string name="selectyourfavoritetopics" tools:ignore="ExtraTranslation">Sevimli mavzularingizni tanlang</string>
+    <string name="selectsomeofyourfavoritetopicstoletussuggestbetternewsforyou." tools:ignore="ExtraTranslation">Sizga yaxshiroq yangiliklarni taklif qilishimiz uchun sevimli mavzularingizdan bir nechtasini tanlang.</string>
+    <string name="next" tools:ignore="ExtraTranslation">Keyingi</string>
+    <string name="getstarted" tools:ignore="ExtraTranslation">Boshlash</string>
+
+    <string name="settings" tools:ignore="ExtraTranslation">Sozlamalar</string>
+    <string name="lightmode" tools:ignore="ExtraTranslation">Tungi rejim</string>
+    <string name="language" tools:ignore="ExtraTranslation">Til</string>
+</resources>

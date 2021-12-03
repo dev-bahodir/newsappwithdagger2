@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragment.home.infragment.BrowseFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/_15sdp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/_15sdp" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/browse"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/discoverthingsofthisworld"
+            android:textColor="@color/black_light"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/tv1" />
+
+        <EditText
+            android:id="@+id/search_text"
+            android:layout_marginTop="@dimen/_22sdp"
+            android:paddingHorizontal="@dimen/_38sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15ssp"
+            android:hint="Search..."
+            android:background="@drawable/white_back"
+            app:layout_constraintTop_toBottomOf="@id/tv2"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"/>
+
+        <ImageView
+            android:id="@+id/search_btn"
+            android:src="@drawable/ic_search"
+            android:layout_marginStart="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@id/search_text"
+            app:layout_constraintTop_toTopOf="@id/search_text"
+            app:layout_constraintBottom_toBottomOf="@id/search_text"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"/>
+
+        <ImageView
+            android:id="@+id/voice_btn"
+            android:src="@drawable/ic_voice"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="@id/search_text"
+            app:layout_constraintTop_toTopOf="@id/search_text"
+            app:layout_constraintBottom_toBottomOf="@id/search_text"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab"
+            app:tabMode="scrollable"
+            app:tabIndicatorHeight="0dp"
+            app:tabRippleColor="@android:color/transparent"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_text" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_transition"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"/>
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recommendedforyou"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/view_transition" />
+
+        <TextView
+            android:id="@+id/see_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/seeall"
+            android:textColor="@color/black_light"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintTop_toTopOf="@id/tv3"
+            app:layout_constraintBottom_toBottomOf="@id/tv3"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            tools:listitem="@layout/browse_rv_item"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/tv3" />
+
+        <ProgressBar
+            android:id="@+id/pro"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline1"
+            app:layout_constraintTop_toBottomOf="@id/tv3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
